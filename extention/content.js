@@ -6,12 +6,6 @@ function applyFilter(element, score) {
     element.style.filter = "blur(8px)";
     element.style.opacity = "0.4";
     element.style.cursor = "pointer";
-    //element.title = `AI-generated content detected with ${(score * 100).toFixed(1)}% confidence. Hover to reveal.`;
-    /*new bootstrap.Tooltip(element, {
-        title: `AI-generated content detected with ${(score * 100).toFixed(1)}% confidence. Hover to reveal.`,
-        placement: "top",
-        trigger: "hover"
-    });*/
     element.onmouseenter = () => { element.style.filter = "none"; element.style.opacity = "1"; };
     element.onmouseleave = () => { element.style.filter = "blur(8px)"; element.style.opacity = "0.4"; };
     
